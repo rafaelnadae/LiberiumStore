@@ -1,0 +1,432 @@
+/*HEADER*/
+:root {
+    --cor-cabecalho: #000000;
+    --cor-texto: #ffffff;
+}
+
+.navbar {
+    background-color: var(--cor-cabecalho) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--cor-texto) !important;
+}
+
+.navbar-brand span {
+    color: var(--cor-texto);
+}
+
+.navbar-nav .nav-link.active {
+    color: #3f666e !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.navbar-brand span {
+    font-size: 1.4rem;
+    color: #2c3e50;
+}
+
+.navbar-brand img {
+    width: 110px;
+    height: auto;
+}
+
+
+
+
+/* Configurações globais e para centralização */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    color: #333;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* O card minimalista */
+.book-card-minimal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    max-width: 900px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book-card-minimal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Layout para telas maiores */
+@media (min-width: 768px) {
+    .book-card-minimal {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 60px;
+        gap: 80px;
+    }
+
+    .book-cover-wrapper {
+        flex-shrink: 0;
+        margin-top: -20px;
+    }
+}
+
+
+
+
+
+
+
+/* Configurações globais e para centralização */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+    color: #333;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* O card minimalista */
+.book-card-minimal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    max-width: 900px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book-card-minimal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Espaçamento para telas pequenas (mobile) */
+@media (max-width: 767px) {
+    .book-cover-wrapper {
+        margin-bottom: 30px;
+    }
+    .book-info {
+        text-align: center;
+    }
+}
+
+/* Layout para telas maiores */
+@media (min-width: 768px) {
+    .book-card-minimal {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 60px;
+        gap: 80px;
+    }
+
+    .book-cover-wrapper {
+        flex-shrink: 0;
+        margin-top: -20px;
+    }
+    .book-info {
+        text-align: left;
+    }
+}
+
+/* Container da capa para garantir o tamanho */
+.book-cover-wrapper {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ddd;
+}
+
+/* A imagem dentro do container, garantindo responsividade */
+.book-cover-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Informações do livro */
+.book-title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin: 0 0 5px 0;
+    line-height: 1.1;
+}
+
+.book-author {
+    font-size: 1rem;
+    color: #777;
+    margin: 0 0 25px 0;
+}
+
+.book-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.book-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .book-actions {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
+
+.action-btn {
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.read-btn {
+    border-color: #333;
+    color: #333;
+}
+
+.read-btn:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.edit-btn {
+    border-color: #2c3e50;
+    color: #2c3e50;
+}
+
+.edit-btn:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.delete-btn {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Estilos para o Pop-up de Edição */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 650px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+}
+
+.popup-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0 0 25px 0;
+    text-align: left;
+    color: #333;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .form-group-row {
+        flex-direction: row;
+    }
+}
+
+.form-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-field::placeholder {
+    color: #999;
+}
+
+.textarea {
+    resize: none;
+    height: 120px;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.file-label {
+    white-space: nowrap;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.file-input-label {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    transition: background-color 0.2s;
+}
+
+.file-input-label:hover {
+    background-color: #eee;
+}
+
+.file-input {
+    display: none;
+}
+
+.choose-file-text {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.save-btn {
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+    background-color: #333;
+}
+
+
+.minimal-footer {
+    background-color: #111;
+    color: #f5f5f5;
+    padding: 1rem 1rem;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.minimal-footer p {
+    font-size: 0.9rem;
+    color: #a8a8a8;
+}
