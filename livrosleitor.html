@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberium Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/LEITOR/livros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="IMAGENS/LOGOS/LOGOBRANCAACESSO.png" alt="Liberium Store" width="60" class="me-2">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="leitor.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link active" href="livrosleitor.html">Livros</a></li>
+                <li class="nav-item"><a class="nav-link" href="contatoleitor.html">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</nav>
+
+<div id="main-content" class="container-blur-content">
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="IMAGENS/BANNERS/bannerdoslivros.png" class="d-block w-100" alt="Banner Sobre Nós">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row row-cols-2 row-cols-lg-4 g-4 justify-content-center">
+
+            <div class="col d-flex justify-content-center">
+                <div class="card card-custom" onclick="openBookModal(this)"
+                     data-titulo="Iracema"
+                     data-preco="R$90,00"
+                     data-capa="IMAGENS/LIVROS/IRACEMA.png"
+                     data-pdf="PDF/Iracema.pdf"
+                     data-descricao="Iracema é uma lenda brasileira, publicada em 1865 por José de Alencar, que narra a história da 'virgem dos lábios de mel', Iracema, e sua paixão pelo colonizador português Martim. É um marco do indianismo romântico no Brasil.">
+                    <div class="card-image-placeholder">
+                        <img src="IMAGENS/LIVROS/IRACEMA.png" class="img-fluid book-cover" alt="Iracema">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-title">Iracema</p>
+                        <p class="card-price">R$90,00</p>
+                        <hr class="card-divider">
+                        <a href="PDF/Iracema.pdf" class="btn btn-block btn-custom" target="_blank">LER PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card card-custom" onclick="openBookModal(this)"
+                     data-titulo="O Guarani"
+                     data-preco="R$70,00"
+                     data-capa="IMAGENS/LIVROS/GUARANI.png"
+                     data-pdf="PDF/Oguarani.pdf"
+                     data-descricao="O Guarani é um romance de José de Alencar, publicado em 1857. A obra narra a história de amor entre o índio Peri e Cecília, filha de D. Antônio de Mariz, em meio a conflitos entre colonizadores portugueses e nativos.">
+                    <div class="card-image-placeholder">
+                        <img src="IMAGENS/LIVROS/GUARANI.png" class="img-fluid book-cover" alt="O Guarani">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-title">O Guarani</p>
+                        <p class="card-price">R$70,00</p>
+                        <hr class="card-divider">
+                        <a href="PDF/Oguarani.pdf" class="btn btn-block btn-custom" target="_blank">LER PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card card-custom" onclick="openBookModal(this)"
+                     data-titulo="Hamlet"
+                     data-preco="R$66,00"
+                     data-capa="IMAGENS/LIVROS/HAMLET.png"
+                     data-pdf="PDF/Hamlet.pdf"
+                     data-descricao="Hamlet é uma tragédia de William Shakespeare. O príncipe Hamlet da Dinamarca busca vingança contra seu tio, Cláudio, que assassinou o pai de Hamlet para tomar o trono e casar-se com a rainha.">
+                    <div class="card-image-placeholder">
+                        <img src="IMAGENS/LIVROS/HAMLET.png" class="img-fluid book-cover" alt="Hamlet">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-title">Hamlet</p>
+                        <p class="card-price">R$66,00</p>
+                        <hr class="card-divider">
+                        <a href="PDF/Hamlet.pdf" class="btn btn-block btn-custom" target="_blank">LER PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card card-custom" onclick="openBookModal(this)"
+                     data-titulo="Vidas Secas"
+                     data-preco="R$70,00"
+                     data-capa="IMAGENS/LIVROS/VIDASSECAS.png"
+                     data-pdf="PDF/VidasSecas.pdf"
+                     data-descricao="Vidas Secas, de Graciliano Ramos, é um dos mais importantes romances do Modernismo brasileiro. Narra a saga de Fabiano e sua família, retirantes nordestinos, em sua luta pela sobrevivência contra a seca e a miséria.">
+                    <div class="card-image-placeholder">
+                        <img src="IMAGENS/LIVROS/VIDASSECAS.png" class="img-fluid book-cover" alt="Vidas Secas">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-title">Vidas Secas</p>
+                        <p class="card-price">R$70,00</p>
+                        <hr class="card-divider">
+                        <a href="PDF/VidasSecas.pdf" class="btn btn-block btn-custom" target="_blank">LER PDF</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="modal fade" id="bookDetailsModal" tabindex="-1" aria-labelledby="bookDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitulo">Detalhes do Livro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img id="modalCapa" src="" class="img-fluid rounded shadow" alt="Capa do Livro"
+                             style="max-height: 350px;">
+                    </div>
+                    <div class="col-md-8">
+                        <h2 id="modalTituloDetalhe" class="fw-bold mt-3 mt-md-0"></h2>
+                        <h4 class="text-success fw-bold" id="modalPrecoDetalhe"></h4>
+                        <hr>
+                        <p id="modalDescricaoDetalhe" class="text-muted"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="modalVerPdfBtn" href="#" class="btn btn-outline-secondary" target="_blank">Ver PDF</a>
+                <button type="button" class="btn btn-custom-liberium" id="btnComprarModalDetalhe">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="purchaseModalLabel">Finalizar Compra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Preencha os dados abaixo para confirmar a compra:</p>
+                <form id="purchaseForm">
+                    <div class="mb-3">
+                        <label for="nomeComprador" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="nomeComprador" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nomeLivroComprado" class="form-label">Nome do Livro</label>
+                        <input type="text" class="form-control" id="nomeLivroComprado" readonly required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dataPagamento" class="form-label">Data do Pagamento</label>
+                        <input type="date" class="form-control" id="dataPagamento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="metodoPagamento" class="form-label">Método de Pagamento</label>
+                        <select class="form-select" id="metodoPagamento" required>
+                            <option selected disabled value="">Selecione...</option>
+                            <option value="pix">PIX</option>
+                            <option value="cartao_credito">Cartão de Crédito</option>
+                            <option value="boleto">Boleto</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-custom-liberium w-100">Confirmar Pagamento</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="minimal-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Liberium Store. Todos os direitos reservados.<br>Feitor por Rafael Nadae e Gabrielly Paes</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS/LEITOR/livros.js"></script>
+</body>
+</html>
